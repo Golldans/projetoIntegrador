@@ -10,7 +10,10 @@
         <div id="mote">
             <div id="mote-content">
                 <h1>GOLLDANS</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, voluptates.</p>
+                <span><h2>connect-></h2>
+                <h2>Opportunity.php</h2></span><br>
+                <p>Bem vindo novamente, <?php echo isset($_SESSION['user']) ?  $_SESSION['user'] : "Visitante" ?></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis harum molestiae necessitatibus id placeat inventore.</p>
             </div>
             <div id="mote-logo">
                 <pre id="rotate">

@@ -64,14 +64,36 @@ nav a{
 
 #mote-content h1{
     font-weight:600;
-    font-size:5rem;
+    font-size:calc(2rem + 3vw);
 }
 
+#mote-content h2{
+    font-weight:300;
+    font-size:calc(1rem + 3vw);
+}
+
+#mote-content span{
+    background-color:rgb(16,16,16);
+    padding:10px 0px 10px 0px;
+    border-radius:10px;
+    border:1px solid black;
+}
+
+#mote-content > *{
+    width:80%;
+    padding:10px 0px;
+}
+
+#mote-content p{
+    font-family:Dogica;
+    font-size:10px;
+    line-height:2;
+}
 
 #mote-logo{
     height:100%;
     width: 40%;
-    font-size:2rem;
+    font-size:calc(1rem + 1vw);
     color:rgb(192, 192, 192);
 }
 
@@ -80,8 +102,9 @@ nav a{
 
 footer{
     width:100vw;
-    height:100vh;
+    height:60vh;
     background-color:rgb(55,55,55);
+    
 }
 
 
