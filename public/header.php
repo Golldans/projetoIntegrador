@@ -1,3 +1,9 @@
+<?php
+
+    $var = "Evitando default"
+
+?>
+
 <header>
         <nav>
             <ol>
