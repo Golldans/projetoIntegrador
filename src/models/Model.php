@@ -30,7 +30,6 @@ class Model
         $this->values[$key] = $value;
     }
 
-
     //Função primária a ser chamada, usando dos parâmetros dados para gerar a query
     public static function get($filters = [], $columns = '*')
     {

@@ -1,6 +1,6 @@
 <?php
 
-require_once(realpath(MODEL_PATH . '/User.php'));
+loadModel('User');
 
 class Login extends Model
 {
@@ -12,7 +12,7 @@ class Login extends Model
             }
         }
 
-        throw new Exception;
+        throw new AppException('Usuário ou senha inválidos.');
 
     }
 }   

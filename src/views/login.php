@@ -19,7 +19,7 @@
         <h1>---------</h1>
         <form action="#" method="post">
             <label for="username">Usuário</label>
-            <input type="text" name="username" id="username" placeholder="Usuário">
+            <input type="text" name="username" id="username" placeholder="Usuário" value="<?= isset($username) ? $username : ''?>">
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="Senha">
             <button>Entrar</button>

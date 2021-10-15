@@ -8,7 +8,7 @@ CREATE TABLE users(
 );
 
 INSERT INTO users VALUES(default, 'golldan', '$2y$10$rHWqDgxp7nwOQrj1FabO.u5KGY1UZitJbme9Nd2gR50lvO7FJX3IO');
-INSERT INTO users VALUES(default, 'haruamai', '$2y$10$rHWqDgxp7nwOQrj1FabO.u5KGY1UZitJbme9Nd2gR50lvO7FJX3IO');
+INSERT INTO users VALUES(default, 'haruamai', '$2y$10$U5faV3S7lBdye8Rh1BI1FeR77Q/NPskGZIuZ0maJfrLpE6sVgQHMG');
 INSERT INTO users VALUES(default, 'whipe', '$2y$10$rHWqDgxp7nwOQrj1FabO.u5KGY1UZitJbme9Nd2gR50lvO7FJX3IO');
 
 SELECT * FROM users;
