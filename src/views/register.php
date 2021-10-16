@@ -1,9 +1,3 @@
-<?php
-
-    
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,16 +10,18 @@
 </head>
 <body id="body-login">
     <div id="login">
-        <h1>Bem vindo, visitante</h1>
-        <form action="#" method="post">
-            <label for="username">Usuário</label>
-            <input type="text" name="username" id="username" placeholder="Usuário" value="<?= isset($username) ? $username : ''?>">
+        <h1>Deseja fazer parte?</h1>
+        <form action="#" method="post" autocomplete="off">
+            <label for="username">Nome de usuário</label>
+            <input type="text" name="username" id="username" placeholder="Usuário">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email">
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="Senha">
+            <label for="passwordConfirm">Confirme sua senha</label>
+            <input type="password" name="passwordConfirm" id="password" placeholder="Sua senha novamente">
             <button>Entrar</button>
         </form>
-        <a href="#">Não possui uma conta?</a>
-        <a href="#">Esqueceu sua senha?</a>
         <?php include(VIEW_PATH . '/template/messages.php'); ?>
     </div>
 

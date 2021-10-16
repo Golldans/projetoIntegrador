@@ -93,4 +93,22 @@ class Model
             return $value;
         }
     }
+
+    public function insert(){
+        $sql = "INSERT INTO " . static::$tableName . " (" .implode(",", static::$columns) . ") VALUES (";
+        foreach(static::$columns as $coluna){
+            $sql .= static::getFormatedValue($this->$coluna) . ",";
+        } 
+
+        $sql[strlen($sql) - 1] = ')';
+        try{
+            Database::executeSQL($sql);
+            echo "Deu certo!";
+        } catch(Exception $e){
+            echo $e;
+        }
+        
+
+    }
+
 }

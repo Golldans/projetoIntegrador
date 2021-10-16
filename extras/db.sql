@@ -4,7 +4,8 @@ USE projetoIntegrador;
 CREATE TABLE users(
 	user_id int PRIMARY KEY AUTO_INCREMENT,
     username varchar(25) NOT NULL,
-    password varchar(100) NOT NULL
+    password varchar(100) NOT NULL,
+    email varchar(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS post(
@@ -20,7 +21,7 @@ INSERT INTO users VALUES(default, 'whipe', '$2y$10$rHWqDgxp7nwOQrj1FabO.u5KGY1UZ
 
 INSERT INTO post VALUES(default, 'Esse é o primeiro titulo', 'Esse é o primeiro post', 'www.abc.com');
 INSERT INTO post VALUES(default, 'Esse é o segundo titulo', 'Esse é o segundo post', 'www.def.com');
-INSERT INTO post VALUES(default, 'Oi chuchu te amo C:<3', 'Esse é o terceiro post', 'www.ghi');
+
 
 SELECT * FROM post;
 SELECT * FROM users;

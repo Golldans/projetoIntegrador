@@ -22,4 +22,14 @@ class Database
         return $result;
     }
 
+    public static function executeSQL($sql){
+        $connect = self::getConnection();
+        if(!mysqli_query($connect, $sql)){
+            throw new Exception(mysqli_error($connect));
+        }
+
+        $connect->close();
+
+    }
+
 }

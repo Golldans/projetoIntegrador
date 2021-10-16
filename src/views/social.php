@@ -16,11 +16,19 @@
   
 </header>
 <body>
+    <div id="atalhos">
 
-<?php include(VIEW_PATH . '/template/post.php')  ?>
+    </div>
+
+    <div id="amigos">
+        
+    </div>
+
+    <div id="posts">
+    <?php include(VIEW_PATH . '/template/post.php')  ?>
+    </div>
+
+
 
 </body>
-<footer>
-
-</footer>
 </html>

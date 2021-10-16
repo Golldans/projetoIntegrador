@@ -1,7 +1,5 @@
 <?php
 
-loadModel('Posts');
-
 class Dados extends Model{
 
     protected static $tableName = 'post';

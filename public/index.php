@@ -8,6 +8,6 @@ if($uri === '/' || $uri === '' || $uri = '/public'){
     $uri = "/login.php";
 }
 
-require_once(CONTROLLER_PATH . "{$uri}");
+require_once(CONTROLLER_PATH . "/insert_user.php");
 
 ?>
