@@ -28,6 +28,15 @@
     justify-content: center;
 }
 
+#login h1{
+    font-family:Dogica;
+    font-size:36px;
+    text-align:center;
+    margin:15px;
+    color:rgb(192, 192, 192);
+    line-height:1.3;
+}
+
 #login form > *{
     margin:20px;
     padding:10px;
@@ -36,17 +45,39 @@
 #login form label{
     margin:0;
     padding:0;
+    color:rgb(192, 192, 192);
+    font-family:Dogica;
 }
 
 #login form input{
     width:100%;
     background-color:rgb(36,36,36);
+    border:none;
+    color:white;
 }
 
 #login form button{
     cursor:pointer;
+    font-weight:700;
+    border:none;
+    padding:10px 25px;
+    transition: 0.1s ease;
 }
 
+#login form button:hover{
+    background-color:rgb(163, 163, 163);
+}
+
+.erro{
+    width:70%;
+    height: 48px;
+    background-color:rgb(105, 21, 21);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: 0.5s ease;
+}
 
 body {
     background-color: rgb(24, 24, 24);
@@ -138,11 +169,33 @@ nav a {
     color: rgb(192, 192, 192);
 }
 
+
+.post{
+    width:480px;
+    height:360px;
+    background-color:whitesmoke;
+    color:black;
+    font-family:Dogica;
+    text-align:center;
+    margin:60px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
 footer {
     width: 100vw;
     height: 60vh;
     background-color: rgb(55, 55, 55);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size: calc(1rem + 1vw);
 }
+
+
 
 /*
     Fontes

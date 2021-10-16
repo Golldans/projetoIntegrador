@@ -1,17 +1,24 @@
 <?php
-
 loadModel('Login');
 
+session_start();
+
+$exception = null;
+
 if(count($_POST) > 0){
+
     $login = new Login($_POST);
     try{
         $user = $login->checkLogin();
-        echo "Usuário {$user->username} logado";
+        $_SESSION['user'] = $user;
+        header("Location: social.php");
     } catch (AppException $e){
-        echo $e->getMessage();
+        $exception = $e;
     }
 }
 
-loadView('Login', $_POST);
+
+
+loadView('Login', $_POST + ['exception' => $exception]);
 
 ?>
