@@ -24,7 +24,7 @@
             <input type="password" name="password" id="password" placeholder="Senha">
             <button>Entrar</button>
         </form>
-        <a href="#">Não possui uma conta?</a>
+        <a href="register.php">Não possui uma conta?</a>
         <a href="#">Esqueceu sua senha?</a>
         <?php include(VIEW_PATH . '/template/messages.php'); ?>
     </div>

@@ -1,3 +1,9 @@
+<?php
+
+loadModel('Login');
+isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,8 +36,9 @@
                     <h2>connect-></h2>
                     <h2>Opportunity.php</h2>
                 </span><br>
-                <p>Bem vindo novamente, <?php echo isset($_SESSION['user']) ?  $_SESSION['user'] : "Visitante" ?></p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis harum molestiae necessitatibus id placeat inventore.</p>
+                <p>Bem vindo novamente, <?php echo isset($usuario) ?  $usuario->username : "Visitante" ?></p>
+                <div id="mote-buttons"><?php echo isset($_SESSION['login']) ? "<a href='social.php'><button>Encontre editais</button></a>" :  "<a href='login.php'><button>Entre</button></a><a href='register'><button>Cadastre-se</button></a>" ?></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quo ut placeat odio illo odit suscipit sapiente nam doloribus temporibus.</p>
             </div>
             <div id="mote-logo">
                 <pre id="rotate">

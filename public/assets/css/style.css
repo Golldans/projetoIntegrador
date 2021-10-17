@@ -162,6 +162,19 @@ nav a {
     line-height: 2;
 }
 
+#mote-buttons button{
+    padding:10px;
+    margin:10px;
+    border:none;
+    cursor:pointer;
+    font-family:Dogica;
+    transition: 0.2s ease;
+}
+
+#mote-buttons button:hover{
+    background-color:rgb(177, 177, 177);
+}
+
 #mote-logo {
     height: 100%;
     width: 40%;

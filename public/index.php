@@ -2,12 +2,12 @@
 
 require_once(dirname(__FILE__,2). '/src/config/config.php');
 
-$uri = urldecode($_SERVER['REQUEST_URI']);
+$url = substr(urldecode($_SERVER['REQUEST_URI']), -9);
 
-if($uri === '/' || $uri === '' || $uri = '/public'){
-    $uri = "/login.php";
+if($url === '/' || $url === '' || $url === 'index.php'){
+    $url = "/landing.php";
 }
 
-require_once(CONTROLLER_PATH . "/insert_user.php");
+require_once(CONTROLLER_PATH . $url);
 
 ?>
