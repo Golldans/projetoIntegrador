@@ -2,7 +2,6 @@
 loadModel('Login');
 
 session_start();
-validarSession();
 
 $exception = null;
 

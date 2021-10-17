@@ -8,7 +8,7 @@ define('MODEL_PATH', realpath(dirname(__FILE__) . '/../models'));
 define('VIEW_PATH', realpath(dirname(__FILE__) . '/../views'));
 define('CONTROLLER_PATH', realpath(dirname(__FILE__) . '/../controllers'));
 define('EXCEPTION_PATH', realpath(dirname(__FILE__) . '/../exceptions'));
-
+define('PUBLIC_PATH', realpath(dirname(__FILE__,3) . '/public'));
 //Arquivos
 require_once(realpath(dirname(__FILE__) . '/database.php'));
 require_once(realpath(dirname(__FILE__) . '/loader.php'));

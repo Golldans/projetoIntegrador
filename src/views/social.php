@@ -17,11 +17,11 @@
 </header>
 <body>
     <div id="atalhos">
-
+        <?php print_r($_SESSION); ?>
     </div>
 
     <div id="amigos">
-        
+        <a href=<?= '../src/controllers/session_destroy.php' ?>><button>Sair</button></a> 
     </div>
 
     <div id="posts">

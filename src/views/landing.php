@@ -38,7 +38,7 @@ isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
                 </span><br>
                 <p>Bem vindo novamente, <?php echo isset($usuario) ?  $usuario->username : "Visitante" ?></p>
                 <div id="mote-buttons"><?php echo isset($_SESSION['login']) ? "<a href='social.php'><button>Encontre editais</button></a>" :  "<a href='login.php'><button>Entre</button></a><a href='register'><button>Cadastre-se</button></a>" ?></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quo ut placeat odio illo odit suscipit sapiente nam doloribus temporibus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam vitae assumenda ipsam illo quas voluptate deserunt sint itaque tempora eaque.</p>
             </div>
             <div id="mote-logo">
                 <pre id="rotate">
