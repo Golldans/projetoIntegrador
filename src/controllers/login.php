@@ -3,7 +3,6 @@ loadModel('Login');
 
 session_start();
 validarSession();
-$_SESSION = [];
 
 $exception = null;
 
