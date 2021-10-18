@@ -1,8 +1,15 @@
 <?php
 
 function validarSession(){
-    $user = $_SESSION['login'];
-    if(!isset($user)){
+
+    if(!isset($_SESSION['login'])){
+        header("Location: index.php");
+    }
+}
+
+function redirect(){
+
+    if(isset($_SESSION['login'])){
         header("Location: index.php");
     }
 }

@@ -103,7 +103,6 @@ class Model
         $sql[strlen($sql) - 1] = ')';
         try{
             Database::executeSQL($sql);
-            echo "Deu certo!";
         } catch(Exception $e){
             echo $e;
         }

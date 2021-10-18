@@ -23,10 +23,9 @@ isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
     <header>
         <nav>
             <ol>
-                <li><a href="#">Início</a></li>
+                <li><a href="">Início</a></li>
                 <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Abuble</a></li>
-                <li><a href="#">Conecte-se</a></li>
+                <li><a href="register">Conecte-se</a></li>
             </ol>
         </nav>
         <div id="mote">
@@ -37,7 +36,7 @@ isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
                     <h2>Opportunity.php</h2>
                 </span><br>
                 <p>Bem vindo novamente, <?php echo isset($usuario) ?  $usuario->username : "Visitante" ?></p>
-                <div id="mote-buttons"><?php echo isset($_SESSION['login']) ? "<a href='social.php'><button>Encontre editais</button></a>" :  "<a href='login.php'><button>Entre</button></a><a href='register'><button>Cadastre-se</button></a>" ?></div>
+                <div id="mote-buttons"><?php echo isset($_SESSION['login']) ? "<a href='social.php'><button>Encontre editais</button></a>" :  "<a href='login.php'><button>Entre</button></a><a href='register.php'><button>Cadastre-se</button></a>" ?></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam vitae assumenda ipsam illo quas voluptate deserunt sint itaque tempora eaque.</p>
             </div>
             <div id="mote-logo">
