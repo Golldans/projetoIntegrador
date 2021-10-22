@@ -33,7 +33,7 @@ if(count($_POST) > 0){
         $_POST['user_id'] = 'default';
         $register = new User($_POST);
         $register->password = password_hash($register->password, PASSWORD_DEFAULT);
-        $register->insert();
+        $register->insert_user();
         $register->password = null;
         $_SESSION['login'] = serialize($register);
         header("Location: index.php");

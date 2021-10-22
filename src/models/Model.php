@@ -94,15 +94,14 @@ class Model
         }
     }
 
-    public function insert(){
-        $sql = "INSERT INTO " . static::$tableName . " (" .implode(",", static::$columns) . ") VALUES (";
-        foreach(static::$columns as $coluna){
-            $sql .= static::getFormatedValue($this->$coluna) . ",";
-        } 
+    public function insert_user(){
+        $connect = Database::getConnection();
+        $stmt = $connect->prepare('INSERT INTO users ( username, password, email) VALUES ( ?, ?, ?);');
 
-        $sql[strlen($sql) - 1] = ')';
+        $stmt->bind_param('sss', $this->username, $this->password, $this->email);
+
         try{
-            Database::executeSQL($sql);
+            $stmt->execute();
         } catch(Exception $e){
             echo $e;
         }
