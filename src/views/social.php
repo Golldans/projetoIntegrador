@@ -17,7 +17,7 @@
 </header>
 <body>
     <div id="atalhos">
-        <?php print_r($_SESSION); ?>
+
     </div>
 
     <div id="amigos">

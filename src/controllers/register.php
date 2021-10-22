@@ -17,6 +17,14 @@ if(count($_POST) > 0){
         if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
             throw new AppException("Email inválido");
         }
+
+        if(User::getOne(['email' => $_POST['email']])){
+            throw new AppException('Email já cadastrado');
+        }
+
+        if(strlen($_POST['username']) <= 4 && mb_check_encoding($_POST['username'], 'UTF-8')){
+            throw new AppException('Nome de usuário inválido');
+        }
     }
 
     try{
@@ -26,6 +34,7 @@ if(count($_POST) > 0){
         $register = new User($_POST);
         $register->password = password_hash($register->password, PASSWORD_DEFAULT);
         $register->insert();
+        $register->password = null;
         $_SESSION['login'] = serialize($register);
         header("Location: index.php");
     } catch(AppException $e){
