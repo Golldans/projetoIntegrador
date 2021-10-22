@@ -11,6 +11,8 @@ Até o momento o usuário é capaz de se registrar e, consequentemente, realizar
     ✅  Usuário é capaz de navegar entre as abas
     ✅  Usuário é capaz de realizar login no sistema
     ✅  Usuário é capaz de se cadastrar no sistema
+    ✅  Sistema de cadastro não aceita resultados inválidos
+    ⛔  Sistema de cadastro está protegido de SQL Injections
     ⛔  Usuário é capaz de recuperar sua conta através de uma confirmação por e-mail
     ⛔  Empresas conseguem postar editais
     ⛔  Interface gráfica totalmente implementada
