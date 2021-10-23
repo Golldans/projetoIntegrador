@@ -4,10 +4,14 @@ require_once(MODEL_PATH . '/Social.php');
 
     $posts = new Dados(array());
 
-    $resultado = $posts->generatePost();
-
     foreach($resultado as $result){
-        echo "<div class='post'>{$result->titulo}</div>";
+        echo "<div class='post'>
+        <div class='title'>
+        {$result->titulo}
+        </div>
+        {$result->texto} <br>
+        <a href='https://{$result->link}'>Link</a><br>
+        </div>";
     }
 
 ?>

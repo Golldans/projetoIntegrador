@@ -13,7 +13,7 @@ isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href='./assets/css/reset.css'>
     <link rel="stylesheet" type="text/css" href='./assets/css/style.css'>
-    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery-3.6.0.js"></script>
     <script src="./assets/js/main.js"></script>
     <title>Document</title>
 </head>

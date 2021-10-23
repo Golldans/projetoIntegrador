@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     max-width: 100%;
+    box-sizing:border-box;
 }
 
 /*
@@ -18,7 +19,7 @@
     background-color: rgb(48, 48, 48);
     height: 80vh;
     width: 460px;
-    border-radius:8px;
+    border-radius: 8px;
 }
 
 #body-login, #login, #login form {
@@ -28,54 +29,54 @@
     justify-content: center;
 }
 
-#login h1{
-    font-family:Dogica;
-    font-size:32px;
-    text-align:center;
-    margin:15px;
-    color:rgb(192, 192, 192);
-    line-height:1.3;
+#login h1 {
+    font-family: Dogica;
+    font-size: 32px;
+    text-align: center;
+    margin: 15px;
+    color: rgb(192, 192, 192);
+    line-height: 1.3;
 }
 
-#login form > *{
-    margin:20px;
-    padding:10px;
+#login form>* {
+    margin: 20px;
+    padding: 10px;
 }
 
-#login form label{
-    margin:0;
-    padding:0;
-    color:rgb(192, 192, 192);
-    font-family:Dogica;
+#login form label {
+    margin: 0;
+    padding: 0;
+    color: rgb(192, 192, 192);
+    font-family: Dogica;
 }
 
-#login form input{
-    width:100%;
-    background-color:rgb(36,36,36);
-    border:none;
-    color:white;
+#login form input {
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    border: none;
+    color: white;
 }
 
-#login form button{
-    cursor:pointer;
-    font-weight:700;
-    border:none;
-    padding:10px 25px;
+#login form button {
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    padding: 10px 25px;
     transition: 0.1s ease;
 }
 
-#login form button:hover{
-    background-color:rgb(163, 163, 163);
+#login form button:hover {
+    background-color: rgb(163, 163, 163);
 }
 
-.erro{
-    width:70%;
+.erro {
+    width: 70%;
     height: 48px;
-    background-color:rgb(105, 21, 21);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    background-color: rgb(105, 21, 21);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.5s ease;
 }
 
@@ -162,17 +163,17 @@ nav a {
     line-height: 2;
 }
 
-#mote-buttons button{
-    padding:10px;
-    margin:10px;
-    border:none;
-    cursor:pointer;
-    font-family:Dogica;
+#mote-buttons button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: Dogica;
     transition: 0.2s ease;
 }
 
-#mote-buttons button:hover{
-    background-color:rgb(177, 177, 177);
+#mote-buttons button:hover {
+    background-color: rgb(177, 177, 177);
 }
 
 #mote-logo {
@@ -182,48 +183,75 @@ nav a {
     color: rgb(192, 192, 192);
 }
 
+/*
+    Social
+*/
 
-.post{
-    width:480px;
-    height:360px;
-    background-color:whitesmoke;
-    color:black;
-    font-family:Dogica;
-    text-align:center;
-    margin:60px auto;
+#social-body{
     display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
-#atalhos{
-    height:100vh;
-    width:250px;
-    background-color:white;
-    position:fixed;
+.post {
+    width: 480px;
+    height: 520px;
+    background-color: whitesmoke;
+    color: black;
+    font-family: Dogica;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    border-radius: 10px;
 }
 
-#amigos{
-    height:100vh;
-    width:250px;
-    background-color:rgb(61, 44, 44);
-    position:fixed;
-    right:0;
+.post > *{
+    width:100%;
+}
+
+.post a{
+    color:black;
+}
+
+.title{
+    background-color: rgb(219, 124, 124);
+}
+
+#atalhos {
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(25, 25, 25);
+    color:white;
+}
+
+#social-main{
+    width:calc(100vw - 500px);
+    background-color:beige;
+    left:250px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    overflow-y:scroll;
+}
+
+#amigos {
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(25, 25, 25);
+    color:white;
 }
 
 footer {
     width: 100vw;
     height: 60vh;
     background-color: rgb(55, 55, 55);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
     font-size: calc(1rem + 1vw);
 }
-
-
 
 /*
     Fontes
