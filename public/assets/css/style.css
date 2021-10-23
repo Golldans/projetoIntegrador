@@ -197,12 +197,14 @@ nav a {
     background-color: whitesmoke;
     color: black;
     font-family: Dogica;
-    margin: 60px auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction:column;
     border-radius: 10px;
+    border: 1px solid black;
+    border-bottom: 6px solid black;
+    margin-bottom:40px;
 }
 
 .post > *{

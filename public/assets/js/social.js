@@ -7,6 +7,7 @@ $('#to-post').submit(function(e){
 
     let u_text = $('#text').val();
 
+
     $.ajax({
         url: 'http://localhost/projetoIntegrador/src/controllers/post.php',
         method: 'POST',
@@ -14,7 +15,9 @@ $('#to-post').submit(function(e){
         dataType: 'json'
     }).done(function(result){
         $('#text').val('');
+        console.log('oi');
         printComments();
+
     })
 
 })
@@ -36,3 +39,5 @@ function printComments() {
 }
 
 printComments();
+
+console.log('oi');

@@ -4,8 +4,9 @@
 require_once('../config/config.php');
 
 header('Content-Type: application/json');
-
 $texto = $_POST['text'];
+
+
 
 $connect = Database::getConnection();
 
