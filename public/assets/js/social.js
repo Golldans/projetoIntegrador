@@ -2,6 +2,10 @@ $("#teste").click(function () {
     $('#teste').html('Fui clicado')
 });
 
+$('.title').click(function(){
+    console.log('click');
+ })
+
 $('#to-post').submit(function(e){
     e.preventDefault();
 
@@ -13,11 +17,9 @@ $('#to-post').submit(function(e){
         method: 'POST',
         data: {text: u_text},
         dataType: 'json'
-    }).done(function(result){
+    }).done(function(){
         $('#text').val('');
-        console.log('oi');
         printComments();
-
     })
 
 })
@@ -29,15 +31,30 @@ function printComments() {
         data: {},
         dataType: 'json'
     }).done(function(result){
-        console.log(result);
         for( let i = 0; i < result.length; i++){
-            $('#posts').prepend("<div class='post'><div class='title'>" + result[i].titulo + "</div>" + result[i].texto + "<br><a href='https://" + result[i].link + "'>Link</a><br></div>")
+            $('#posts').prepend("<div class='post'><div class='title'>" + result[i].titulo + "</div><div class='id'> #" + result[i].post_id + "</div>" + result[i].texto + "<br><a href='https://" + result[i].link + 
+            "'>Link</a><div class='curtidas'>" + result[i].curtidas + "</div><button class='like'>Curtir</button></div>");
         };
 
-        
+        $('.like').click(function (){
+            let id = $(this).parent().children('.id').html();
+            id = id.substring(2);
+            
+            $.ajax({
+                url: 'http://localhost/projetoIntegrador/src/controllers/like.php',
+                method: 'POST',
+                data: {id: id},
+                dataType: 'json'
+            }).done(function(result){
+               
+            })
+            let like = $(this).parent().children('.curtidas').html();
+            $(this).parent().children('.curtidas').html(parseInt(like) + 1);
+            ;
+        });
     })
 }
 
-printComments();
 
-console.log('oi');
+
+printComments();

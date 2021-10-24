@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS post(
     titulo VARCHAR(50) NOT NULL,
     texto VARCHAR(100) NOT NULL,
     link VARCHAR(100) NOT NULL,
+    curtidas INT DEFAULT 0,
     autor INT
 );
 

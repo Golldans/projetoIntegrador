@@ -219,6 +219,11 @@ nav a {
     background-color: rgb(219, 124, 124);
 }
 
+.curtidas{
+    font-family:Dogica;
+    text-align:center;
+}
+
 #atalhos {
     height: 100vh;
     width: 250px;
