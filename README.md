@@ -14,5 +14,5 @@ Até o momento o usuário é capaz de se registrar e, consequentemente, realizar
     ✅  Sistema de cadastro não aceita resultados inválidos
     ✅  Sistema de cadastro está protegido de SQL Injections
     ⛔  Usuário é capaz de recuperar sua conta através de uma confirmação por e-mail
-    ⛔  Empresas conseguem postar editais
+    ✅  Empresas conseguem postar editais
     ⛔  Interface gráfica totalmente implementada
