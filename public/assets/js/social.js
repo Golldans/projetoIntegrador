@@ -30,6 +30,7 @@ function printComments() {
         data: {},
         dataType: 'json'
     }).done(function(result){
+        $('#posts').empty();
         for( let i = 0; i < result.length; i++){
             $('#posts').prepend("<div class='post'><div class='title'>" + result[i].titulo + "</div><div class='id'> #" + result[i].post_id + "</div><div class='texto'>" + result[i].texto + "</div><br><a href='https://" + result[i].link + 
             "'>Link</a><div class='curtidas'>" + result[i].curtidas + "</div><button class='like'>Curtir</button></div>");
@@ -47,8 +48,9 @@ function printComments() {
                 data: {id: id},
                 dataType: 'json'
             }).done(function(liked){
+                console.log(liked);
                 let like = $(self).parent().children('.curtidas').html();
-                if( like == 0){
+                if( liked == 0){
                     $(self).parent().children('.curtidas').html(parseInt(like) + 1);
                     $(self).addClass('curtido');
                 } else{

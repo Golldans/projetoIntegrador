@@ -18,12 +18,14 @@ $stmtcondit->bind_param('ii', $post, $user);
 $stmtcondit->execute();
 $result = $stmtcondit->get_result();
 $dado = $result->fetch_assoc();
-$curtido = $dado['liked'];
-if(is_null($curtido)){
+
+if(is_null($dado)){
     $stmtinput = $connect->prepare('INSERT INTO likes (post, user) VALUES (?, ?)');
     $stmtinput->bind_param('ii', $post, $user);
     $stmtinput->execute();
     $curtido = 0;
+} else{
+    $curtido = $dado['liked'];
 }
 
 
