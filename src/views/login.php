@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="./assets/img/icon.png">
     <title>Login</title>
 </head>
 <body id="body-login">
@@ -19,7 +20,9 @@
         <h1>Bem vindo, visitante</h1>
         <form action="#" method="post">
             <label for="username">Usuário</label>
-            <input type="text" name="username" id="username" placeholder="Usuário" value="<?= isset($username) ? $username : ''?>">
+            <input type="text" name="username" id="username" placeholder="Usuário" value="">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email">
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="Senha">
             <button>Entrar</button>

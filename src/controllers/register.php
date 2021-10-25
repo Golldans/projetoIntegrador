@@ -35,6 +35,7 @@ if(count($_POST) > 0){
         $register->password = password_hash($register->password, PASSWORD_DEFAULT);
         $register->insert_user();
         $register->password = null;
+        $register->user_id = $register->addUserId();
         $_SESSION['login'] = serialize($register);
         header("Location: index.php");
     } catch(AppException $e){

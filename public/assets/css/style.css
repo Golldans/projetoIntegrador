@@ -193,30 +193,45 @@ nav a {
 
 .post {
     width: 480px;
-    height: 520px;
+    min-height: 360px;
     background-color: whitesmoke;
     color: black;
-    font-family: Dogica;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction:column;
-    border-radius: 10px;
+    border-radius: 8px 8px 0px 8px;
     border: 1px solid black;
-    border-bottom: 6px solid black;
+    box-shadow: 10px 10px 0px 5px #000000;
     margin-bottom:40px;
 }
 
 .post > *{
     width:100%;
+    padding:10px;
 }
 
 .post a{
-    color:black;
+    color:rgb(44, 133, 96);
+    font-weight:bolder;
 }
 
 .title{
-    background-color: rgb(219, 124, 124);
+    font-weight:bolder;
+    text-transform:capitalize;
+    font-size:2.3rem;
+    height:2.3rem;
+}
+
+.id{
+    color:rgb(87, 87, 87);
+    font-weight:300;
+    font-size:1.2rem;
+}
+
+.texto{
+    color:rgb(36, 36, 36);
+    text-align:justify;
 }
 
 .curtidas{
@@ -224,28 +239,76 @@ nav a {
     text-align:center;
 }
 
-#atalhos {
-    height: 100vh;
-    width: 250px;
+.like{
+    background-color: rgb(190, 190, 190);
+    transition: 0.3s ease;
+    border:none;
+}
+
+.like:hover{
+    cursor:pointer;
+    background-color: rgb(211, 211, 211);
+}
+
+.like.curtido{
+    background-color: aquamarine;
+}
+
+#atalhos{
+    height:100vh;
+    max-height: 100%;
+    width: calc( 150px + 3vw);
     background-color: rgb(25, 25, 25);
     color:white;
+    position:fixed;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+}
+
+#atalhos ul{
+    text-align:left;
+}
+
+#atalhos li{
+    padding:15px;
+}
+
+#atalhos a{
+    font-weight:600;
+    font-size:1.2rem;
+    transition: 0.2s ease;
+}
+
+#atalhos a:hover{
+    color:rgb(160, 160, 160);
 }
 
 #social-main{
-    width:calc(100vw - 500px);
+    min-height:100vh;
+    width:calc(94vw - 300px);
     background-color:beige;
     left:250px;
     display:flex;
     flex-direction:column;
     align-items: center;
     overflow-y:scroll;
+    margin:0 auto;
 }
 
 #amigos {
     height: 100vh;
-    width: 250px;
+    max-height:100%;
+    width: calc( 150px + 3vw);
     background-color: rgb(25, 25, 25);
     color:white;
+    position:fixed;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    right:0;
 }
 
 footer {
@@ -267,4 +330,19 @@ footer {
 @font-face {
     font-family: "Dogica";
     src: url("../fonts/dogicapixel.ttf");
+}
+
+/*
+    Media Queries
+*/
+
+@media (max-width: 720px){
+    #amigos, #atalhos{
+        display:none;
+    }
+
+    #social-main{
+        width:100vw;
+    }
+
 }

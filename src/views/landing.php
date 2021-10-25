@@ -5,7 +5,7 @@ isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,10 @@ isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href='./assets/css/reset.css'>
     <link rel="stylesheet" type="text/css" href='./assets/css/style.css'>
+    <link rel="icon" href="./assets/img/icon.png">
     <script src="./assets/js/jquery-3.6.0.js"></script>
     <script src="./assets/js/main.js"></script>
-    <title>Document</title>
+    <title>Golldans</title>
 </head>
 
 <body>

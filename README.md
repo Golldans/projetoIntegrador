@@ -15,4 +15,5 @@ Até o momento o usuário é capaz de se registrar e, consequentemente, realizar
     ✅  Sistema de cadastro está protegido de SQL Injections
     ⛔  Usuário é capaz de recuperar sua conta através de uma confirmação por e-mail
     ✅  Empresas conseguem postar editais
+    ✅  Usuários conseguem curtir publicações permanentemente
     ⛔  Interface gráfica totalmente implementada

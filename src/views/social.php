@@ -11,8 +11,8 @@ $var = "Evitando default hacklang";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <title>Login</title>
+    <link rel="icon" href="./assets/img/icon.png">
+    <title>Editais</title>
 </head>
 <header>
 
@@ -21,8 +21,13 @@ $var = "Evitando default hacklang";
 <body id="social-body">
     <div id="atalhos">
         Atalhos
-        <a href=<?= '../src/controllers/session_destroy.php' ?>><button>Sair</button></a>
-        <button id="teste">aaaa</button>
+        <ul>
+            <li><a href="#">Item #1</a></li>
+            <li><a href="#">Item #2</a></li>
+            <li><a href="#">Item #3</a></li>
+            <li><a href="#">Item #4</a></li>
+            <li><a href='../src/controllers/session_destroy.php'>Sair</a></li>
+        </ul>
     </div>
 
     <section id="social-main">

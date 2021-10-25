@@ -94,6 +94,22 @@ class Model
         }
     }
 
+    public function addUserId(){
+        $id = (User::getOne(['email' => $this->email]));
+        if($id){
+            $connect = Database::getConnection();
+            $stmt = $connect->prepare('SELECT user_id FROM users WHERE email = ?');
+            $stmt->bind_param('s', $this->email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            $id = $result->fetch_assoc();
+
+            $stmt->close();
+            return $id['user_id'];
+        }  
+    }
+
     public function insert_user(){
         $connect = Database::getConnection();
         $stmt = $connect->prepare('INSERT INTO users ( username, password, email) VALUES ( ?, ?, ?);');
@@ -104,8 +120,7 @@ class Model
             $stmt->execute();
         } catch(Exception $e){
             echo $e;
-        }
-        
+        }    
 
     }
 
