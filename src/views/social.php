@@ -22,7 +22,7 @@ $var = "Evitando default hacklang";
     <div id="atalhos">
         Atalhos
         <ul>
-            <li><a href="#">Item #1</a></li>
+            <li><a href="../public/index.php">Home</a></li>
             <li><a href="#">Item #2</a></li>
             <li><a href="#">Item #3</a></li>
             <li><a href="#">Item #4</a></li>
@@ -32,8 +32,12 @@ $var = "Evitando default hacklang";
 
     <section id="social-main">
         <form action="#" method="post" id="to-post">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo">
             <label for="texto">Texto</label>
-            <input type="text" name="text" id="text">
+            <textarea name="text" id="text" cols="30" rows="10"></textarea>
+            <label for="link">Link</label>
+            <input type="text" name="link" id="link">
             <button>Enviar</button>
         </form>
         <div id="posts">

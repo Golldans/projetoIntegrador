@@ -10,16 +10,25 @@ $('#to-post').submit(function(e){
     e.preventDefault();
 
     let u_text = $('#text').val();
+    let u_titulo = $('#titulo').val();
+    let u_link = $('#link').val();
 
-    $.ajax({
-        url: 'http://localhost/projetoIntegrador/src/controllers/post.php',
-        method: 'POST',
-        data: {text: u_text},
-        dataType: 'json'
-    }).done(function(){
-        $('#text').val('');
-        printComments();
-    })
+
+    if(u_text != '' && u_titulo != '' && u_link != ''){
+        $.ajax({
+            url: 'http://localhost/projetoIntegrador/src/controllers/post.php',
+            method: 'POST',
+            data: {text: u_text, title: u_titulo, link: u_link},
+            dataType: 'json'
+        }).done(function(result){
+            console.log(result);
+            $('#text').val('');
+            printComments();
+        })
+    } else{
+        alert('Tenha certeza que tudo foi preenchido');
+    }
+
 
 })
 

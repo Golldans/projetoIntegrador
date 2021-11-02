@@ -25,8 +25,8 @@ isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
         <nav>
             <ol>
                 <li><a href="">Início</a></li>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="register">Conecte-se</a></li>
+                <li><a href="#features">Quem somos</a></li>
+                <li><a href="register.php">Conecte-se</a></li>
             </ol>
         </nav>
         <div id="mote">
@@ -59,7 +59,32 @@ isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
     </header>
 
     <main>
-
+        <section id="features">
+            <div class="feat">
+                <div class="showoff" style="background-image: url('./assets/img/feat1.gif');"></div>
+                <div class="showin">
+                    <h1>Tudo é um</h1>
+                    <h2>Procurar é coisa do passado</h2>
+                    <h3>Esse é o principal fundamento do nosso sistema, mesmo em um mundo globalizado ainda estamos atrasados nas questões de oportunidades e, um passo de cada vez, certo?</h3>
+                </div>
+            </div>
+            <div class="feat">
+                <div class="showoff" style="background-image: url('./assets/img/feat2.gif');"></div>
+                <div class="showin">
+                    <h1>A todo momento</h1>
+                    <h2>Sempre tem algo diferente</h2>
+                    <h3>Quando tudo estiver pronto, todos os editais irão convergir aqui, e a todo momento você terá uma nova chance.</h3>
+                </div>
+            </div>
+            <div class="feat">
+                <div class="showoff" style="background-image: url('./assets/img/feat3.gif');"></div>
+                <div class="showin">
+                    <h1>Continue tentando</h1>
+                    <h2>De novo e de novo</h2>
+                    <h3>E, se agora você não encontrou nada que te interesse, espere pela próxima vez e continue tentando, todo mundo encontra algo que o agrade alguma hora.</h3>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>

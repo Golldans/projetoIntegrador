@@ -4,21 +4,18 @@
 require_once('../config/config.php');
 
 header('Content-Type: application/json');
-$texto = $_POST['text'];
 
+    $texto = $_POST['text'];
+    $titulo = $_POST['title'];
+    $link = $_POST['link'];
+    
+    
+    $connect = Database::getConnection();
+    
+    $stmt = $connect->prepare('INSERT INTO post (titulo, texto, link) VALUES ( ?, ?, ?)');
+    $stmt->bind_param('sss', $titulo, $texto, $link);
+    
+    $stmt->execute();
 
-
-$connect = Database::getConnection();
-
-$stmt = $connect->prepare('INSERT INTO post (titulo, texto, link) VALUES ( ?, ?, ?)');
-$stmt->bind_param('sss', $texto, $texto, $texto);
-
-
-
-if($stmt->execute()){
-    echo json_encode('Comentário salvo');
-} else {
-    echo json_encode('Faiô');
-}
-
+    echo json_encode("Fim");
 ?>
