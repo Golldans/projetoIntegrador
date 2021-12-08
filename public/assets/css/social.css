@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display:flex;
+}
+
+.flexBox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background{
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+body{
+    background-color:rgb(4,4,4);
+}
+
+header{
+    width:100vw;
+    max-width:100%;
+    height:40vh;
+}
+
+nav{
+    width:100%;
+    height:48px;
+    background-color:rgb(54, 54, 54);
+}
+
+#profile{
+    width:100%;
+    height:calc(100% - 48px);
+    background-color:rgb(12,12,12);
+    flex-direction:column;
+}
+
+.banner{
+    width:100%;
+    height:70%;
+    background-color:rgb(0, 0, 0);
+    background-image: url("../img/banner2.jpg");
+}
+
+.to-post{
+    width:100%;
+    height:30%;
+    min-height:68px;
+    background-color:rgb(22, 22, 22);
+}
+
+#perfil, #postar{
+    width:50%;
+    height: 100%;
+}
+
+#perfil{
+    justify-content: space-evenly;
+}
+
+#dados{
+    font-family:Input;
+    color:white;
+}
+
+#foto{
+    width: calc(64px + 0.5vw);
+    height: calc(64px + 0.5vw);
+    border-radius:50%;
+    -webkit-box-shadow: 0px 0px 15px 1px #000000; 
+    box-shadow: 0px 0px 15px 1px #000000;
+}
+
+#postar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#to-post{
+
+}
+
+#to-post > *:hover{
+    cursor:pointer;
+}
+
+#posts{
+    width:100%;
+    min-height:60vh;
+    flex-direction: column;
+}
+
+#posts > *{
+    display:flex;
+    flex-direction: column;
+
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+.post{
+    width:45vw;
+    min-height:384px;
+    margin:15px;
+    background-color:rgb(12,12,12);
+    border-radius:5px;
+    color:rgb(112, 112, 112);
+    font-family: Input;
+}
+
+.title{
+    width:100%;
+    height:20%;
+    min-height:76.8px;
+}
+
+.id{
+    width:100%;
+    height:10%;
+    min-height:38.4px;
+}
+
+.texto{
+    width:100%;
+    height:50%;
+    min-height:192px;
+}
+
+.curtidas{
+    width:100%;
+    height:10%;
+    min-height:38.4px;
+}
+
+.like{
+    width:100%;
+    height:10%;
+    min-height:38.4px;
+    border:transparent;
+    transition: 0.2s ease;
+}
+
+.like:hover{
+    cursor:pointer;
+}
+
+@font-face {
+    font-family: "Input";
+    src: url("../fonts/input.ttf");
+}

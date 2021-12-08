@@ -42,15 +42,4 @@ INSERT INTO likes VALUES(default, 1, 7, false);
 INSERT INTO likes (post, user) VALUES(1,1);
 INSERT INTO likes (post, user, liked) VALUES (2, 7, 0);
 
-SELECT * FROM users;
-SELECT * FROM post;
-SELECT * FROM likes;
 
-SELECT user_id, username FROM users WHERE 1 = 1 AND user_id = 1 AND username = 'golldan';
-SELECT user_id FROM users WHERE email = 'admin@gmail.com';
-UPDATE users SET email = 'admin@gmail.com' WHERE user_id = 7; 
-SELECT liked FROM likes WHERE post = 3 AND user = 1;
-
-DROP TABLE likes;
-DROP TABLE post;
-DROP TABLE users;

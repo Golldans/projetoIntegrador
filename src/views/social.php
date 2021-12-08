@@ -6,31 +6,59 @@ $var = "Evitando default hacklang";
 <html lang="pt-BR">
 
 <head>
+    <title>Editais</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="./assets/img/icon.png">
-    <title>Editais</title>
+    <link rel="stylesheet" href="assets/css/social.css"/>
+    <link rel="icon" href="./assets/img/icon.png"/>
+
 </head>
 <header>
+    <nav>
 
+    </nav>
+    <section id="profile" class="flexBox">
+        <div class="banner background">
+
+        </div>
+        <div class="to-post flexBox">
+        
+        <div id="perfil" class="flexBox">
+            <div id="dados">
+                <ul>
+                    <li>Bem vindo novamente, Cristiano</li>
+                    <li>Sua última atividade foi: 21212</li>
+                    <li>Jooj</li>
+                </ul>
+            </div>
+            <div id="foto" class="background" style="background-image: url('./assets/img/twitch.png');">
+
+            </div>
+        </div>
+
+        <div id="postar">
+        <form action="" method="post" id="to-post" class="flexBox">
+            <input type="text" name="corpo" id="corpo">
+            <select>
+            <option value="a">aaa</option>
+            </select>
+            <button>Enviar</button>
+        </form>
+        </div>
+
+        
+            <form action="" method="post"></form>
+        </div>
+    </section>
 </header>
+<body>
 
-<body id="social-body">
-    <div id="atalhos">
-        Atalhos
-        <ul>
-            <li><a href="../public/index.php">Home</a></li>
-            <li><a href="#">Item #2</a></li>
-            <li><a href="#">Item #3</a></li>
-            <li><a href="#">Item #4</a></li>
-            <li><a href='../src/controllers/session_destroy.php'>Sair</a></li>
-        </ul>
-    </div>
+<div id="posts" class="flexBox">
 
-    <section id="social-main">
+</div>
+    <!-- <section id="social-main">
         <form action="#" method="post" id="to-post">
             <label for="titulo">Titulo</label>
             <input type="text" name="titulo" id="titulo">
@@ -43,12 +71,7 @@ $var = "Evitando default hacklang";
         <div id="posts">
 
         </div>
-    </section>
-
-    <div id="amigos">
-        <h1>Amigos</h1>
-    </div>
-
+    </section> -->
 </body>
 <script src="assets/js/jquery-3.6.0.js"></script>
 <script src="assets/js/social.js"></script>
