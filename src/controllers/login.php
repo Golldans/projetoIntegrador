@@ -12,6 +12,8 @@ if(count($_POST) > 0){
         $user = $login->checkLogin();
         $login->user_id = $login->addUserId();
         $login->password = null;
+        $login->last = $login->lastSeen($login->user_id)->lastseen;
+        $login->empresa = $login->empresa($login->user_id)->empresa;
         $_SESSION['login'] = serialize($login);
         header("Location: index.php");
     } catch (AppException $e){

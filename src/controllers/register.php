@@ -8,23 +8,27 @@ redirect();
 $exception = null;
 
 if(count($_POST) > 0){
-
     function validarRegistro(){
-        if($_POST['password'] !== $_POST['passwordConfirm'] || $_POST['password'] == ''){
-            throw new AppException("Senhas incompatíveis ou vazias");
-        }
+        // if($_POST['password'] !== $_POST['passwordConfirm'] || $_POST['password'] == ''){
+        //     throw new AppException("Senhas incompatíveis ou vazias");
+        // }
     
-        if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-            throw new AppException("Email inválido");
-        }
+        // if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        //     throw new AppException("Email inválido");
+        // }
 
-        if(User::getOne(['email' => $_POST['email']])){
-            throw new AppException('Email já cadastrado');
-        }
+        // if(User::getOne(['email' => $_POST['email']])){
+        //     throw new AppException('Email já cadastrado');
+        // }
 
-        if(strlen($_POST['username']) <= 4 && mb_check_encoding($_POST['username'], 'UTF-8')){
-            throw new AppException('Nome de usuário inválido');
-        }
+        // if(strlen($_POST['username']) <= 4 && mb_check_encoding($_POST['username'], 'UTF-8')){
+        //     throw new AppException('Nome de usuário inválido');
+        // }
+            if($_POST['empresa'] == "on"){
+                $_POST['empresa'] = 1;
+            }else{
+                $_POST['empresa'] = 0;
+            }
     }
 
     try{

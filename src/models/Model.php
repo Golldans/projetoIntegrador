@@ -51,6 +51,8 @@ class Model
     {
         $class = get_called_class();
         $result = static::getResultSetFromSelect($filters, $columns);
+        
+        
 
         return $result ? new $class($result->fetch_assoc()) : null;
     }
@@ -112,9 +114,9 @@ class Model
 
     public function insert_user(){
         $connect = Database::getConnection();
-        $stmt = $connect->prepare('INSERT INTO users ( username, password, email) VALUES ( ?, ?, ?);');
+        $stmt = $connect->prepare('INSERT INTO users ( username, password, email, empresa) VALUES ( ?, ?, ?, ?);');
 
-        $stmt->bind_param('sss', $this->username, $this->password, $this->email);
+        $stmt->bind_param('sssi', $this->username, $this->password, $this->email, $this->empresa);
 
         try{
             $stmt->execute();

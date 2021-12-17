@@ -17,6 +17,8 @@
             <input type="text" name="username" id="username" placeholder="Usuário">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Email">
+            <label for="empresa">Instituição?</label>
+            <input type="checkbox" name="empresa" id="empresa">
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="Senha">
             <label for="passwordConfirm">Confirme sua senha</label>

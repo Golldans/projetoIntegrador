@@ -14,4 +14,15 @@ class Login extends Model
         throw new AppException('Usuário ou senha inválidos.');
     }
 
+    public function lastSeen($id){
+        $volta = User::getOne(['user_id' => $id], 'lastseen');;
+        return $volta;
+    }
+
+    public function empresa($id){
+        $volta = User::getOne(['user_id' => $id], 'empresa');;
+        return $volta;
+    }
+
+
 }   

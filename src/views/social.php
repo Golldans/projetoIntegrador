@@ -1,5 +1,9 @@
 <?php
 $var = "Evitando default hacklang";
+isset($_SESSION['login']) ? $usuario = unserialize($_SESSION['login']) : '';
+$last = substr($usuario->last, 0, 10);
+$last = (explode("-",$last));
+$last = $last[2] . "/" . $last[1] . "/" . $last[0];
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +21,13 @@ $var = "Evitando default hacklang";
 </head>
 <header>
     <nav>
-
+        <a href="http://localhost/projetoIntegrador/public/" class="flexBox">
+            <img src="./assets/img/icon.png" alt="" srcset="">
+            Golldans
+        </a>
+        <a href="http://localhost/projetoIntegrador/src/controllers/session_destroy.php">
+            <button>Sair</button>
+        </a>
     </nav>
     <section id="profile" class="flexBox">
         <div class="banner background">
@@ -28,50 +38,41 @@ $var = "Evitando default hacklang";
         <div id="perfil" class="flexBox">
             <div id="dados">
                 <ul>
-                    <li>Bem vindo novamente, Cristiano</li>
-                    <li>Sua última atividade foi: 21212</li>
-                    <li>Jooj</li>
+                    <li>Bem vindo novamente, <?= $usuario->username ?></li>
+                    <li>Sua última atividade foi em: <?= $last ?></li>
                 </ul>
             </div>
-            <div id="foto" class="background" style="background-image: url('./assets/img/twitch.png');">
-
-            </div>
+                <div id="foto" class="background" style="background-image: url('./assets/img/icon.png');" alt="Credit: https://br.pinterest.com/pin/151433606205391015/" title="Credit: https://br.pinterest.com/pin/151433606205391015/">
+                </div>
+            </input>
         </div>
 
         <div id="postar">
-        <form action="" method="post" id="to-post" class="flexBox">
-            <input type="text" name="corpo" id="corpo">
-            <select>
-            <option value="a">aaa</option>
-            </select>
-            <button>Enviar</button>
-        </form>
+
         </div>
 
-        
-            <form action="" method="post"></form>
         </div>
     </section>
 </header>
 <body>
 
+<?php if ($usuario->empresa): ?>
+<div id="posting" class="flexBox">
+        <form action="" method="post" id="to-post" class="flexBox">
+            <input type="text" name="titulo" id="title" placeholder="Titulo">
+            <textarea name="corpo" id="text" placeholder="Corpo do texto"></textarea>
+            <div id="form-actions">
+                <input type="text" name="link" id="link" placeholder="Link">
+                <button>Enviar</button>
+            </div>
+        </form>
+</div>
+<?php endif; ?>
+
 <div id="posts" class="flexBox">
 
 </div>
-    <!-- <section id="social-main">
-        <form action="#" method="post" id="to-post">
-            <label for="titulo">Titulo</label>
-            <input type="text" name="titulo" id="titulo">
-            <label for="texto">Texto</label>
-            <textarea name="text" id="text" cols="30" rows="10"></textarea>
-            <label for="link">Link</label>
-            <input type="text" name="link" id="link">
-            <button>Enviar</button>
-        </form>
-        <div id="posts">
 
-        </div>
-    </section> -->
 </body>
 <script src="assets/js/jquery-3.6.0.js"></script>
 <script src="assets/js/social.js"></script>

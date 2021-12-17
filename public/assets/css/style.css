@@ -17,7 +17,7 @@
 
 #login {
     background-color: rgb(48, 48, 48);
-    height: 80vh;
+    min-height: 80vh;
     width: 460px;
     border-radius: 8px;
 }
